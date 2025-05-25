@@ -43,7 +43,7 @@ def generate():
 
     # Copy the generated password to the clipboard
     pyperclip.copy(password)
-    typer.echo(f"Generated password: {password}")
+    #typer.echo(f"Generated password: {password}")
 
 
 

@@ -3,7 +3,7 @@ import secrets
 from collections import Counter, defaultdict
 
 logger = logging.getLogger(__name__)
-logger.setLevel("DEBUG")
+logger.setLevel("INFO")
 LOGGING_STYLE = "%(asctime)s [%(levelname)s] %(name)s: %(message)s"
 logging.basicConfig(format=LOGGING_STYLE, datefmt="%Y-%m-%d %H:%M:%S")
 
@@ -65,7 +65,8 @@ class MarkovChainGenerator:
             order (int): The order of the Markov chain.
 
         Returns:
-            dict: A dictionary where keys are prefixes and values are Counters of next characters.
+            dict: A dictionary where keys are prefixes and values are Counters of
+                next characters.
         """
         transitions = defaultdict(Counter)
 
@@ -116,13 +117,5 @@ class MarkovChainGenerator:
 
         # Remove the prefix characters from the generated word
         word = word[self.order :]
+
         return word
-
-
-# order = 3
-
-# wordlist = load_wordlist_from_file("/usr/share/dict/words")
-# transitions = build_transitions_dict(wordlist, order=order)
-# word = generate_word(transitions, order=order, length=3)
-
-# logger.debug(f"Generated word: {word}")
