@@ -1,0 +1,14 @@
+[lint]
+select = [
+    # Pyflakes
+    "F",
+    # Pycodestyle
+    "E",
+    "W",
+    # isort
+    "I001"
+]
+
+[format]
+quote-style = "double"
+indent-style = "space"
