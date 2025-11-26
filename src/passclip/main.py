@@ -3,7 +3,7 @@ import secrets
 import pyperclip
 import typer
 
-from passclip.generator import MarkovChainGenerator
+from src.passclip.generator import MarkovChainGenerator
 
 app = typer.Typer()
 

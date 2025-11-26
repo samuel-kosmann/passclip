@@ -1,21 +1,11 @@
 [project]
 name = "passclip"
 version = "0.1.0"
-description = ""
-authors = [
-    {name = "Your Name",email = "you@example.com"}
-]
+description = "A CLI tool to generate and copy secure and easy-to-remember passwords to the clipboard."
+authors = [{ name = "Samuel Kosmann", email = "samuel.kosmann@gmail.com" }]
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.13, <3.14"
 dependencies = [
-    "typer (>=0.15.4,<0.16.0)",
-    "pyperclip (>=1.9.0,<2.0.0)"
+    "pyperclip>=1.11.0",
+    "typer>=0.20.0",
 ]
-
-[tool.poetry]
-packages = [{include = "passclip", from = "src"}]
-
-
-[build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
